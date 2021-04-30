@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr 30 00:09:55 2021
+
+@author: rh.hayden
+Title: Prog II Recursion Application
+"""
+
+#One Tail Recursion 
+
+User_Input= input("How many miles are we driving?") #saves as string
+MilesLeft = int(User_Input)
+
+def Miles(MilesLeft):
+    if (MilesLeft == 0):
+            #Base Case
+            print(MilesLeft, "Miles Left, you are at your destination.")
+    else:
+            print(MilesLeft, "Miles Left")
+            #Recursion Step
+            return Miles(MilesLeft-1)
+    return MilesLeft
+
+print("\n\nMiles")
+Miles(MilesLeft)
+
+#Non Tail Recursion
+
+User_Input_NT= input("How many miles are we driving?") #saves as string
+MilesLeftNT = int(User_Input)
+
+def MilesNT(MilesLeftNT):
+    if (MilesLeftNT == 0):
+            #Base Case
+            print(MilesLeftNT, "Miles Left, you are at your destination.")
+    else:
+             return MilesNT(MilesLeftNT-1)
+             print(MilesLeftNT, "Miles Left")
+            #Recursion Step    
+    return MilesLeftNT
+
+print("\n\nMiles")
+MilesNT(MilesLeftNT)
+
+#Recursion with no base case - Endless recursion (endless loop)
+
+User_Input_Inf= input("How many miles are we driving?") #saves as string
+MilesLeftInf = int(User_Input)
+
+
+def MilesInf(MilesLeftInf):
+    print(MilesLeftInf, "Miles Left")
+    #Recursion Step
+    return MilesInf(MilesLeftInf-1)
+
+print("\n\nMiles")
+MilesInf(MilesLeftInf)
