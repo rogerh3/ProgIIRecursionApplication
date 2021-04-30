@@ -46,7 +46,7 @@ MilesNT(MilesLeftNT)
 #Recursion with no base case - Endless recursion (endless loop)
 
 User_Input_Inf= input("How many miles are we driving?") #saves as string
-MilesLeftInf = int(User_Input)
+MilesLeftInf = int(User_Input_Inf)
 
 
 def MilesInf(MilesLeftInf):
